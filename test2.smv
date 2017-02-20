@@ -1,3 +1,4 @@
+--current work: select target,network,sender to test a new perfect way,as test3
 MODULE target(init_state)
   VAR
     state : {warning,error,emerging,inactive,running};
@@ -38,6 +39,31 @@ MODULE network()
   ASSIGN
     init(state) := active;
     next(state) := state;
+
+    MODULE sender(network,firewall,input_log,filter)
+      VAR
+        state : {inactive,active};
+        output_log : {none,null,warning,error,emerging,message};
+      DEFINE
+        dead := (state=inactive);
+        get_null := (input_log = null);
+        send_null := dead | firewall.dead | network.dead;
+      IVAR
+        fault_event_failed_open:boolean;
+        fault_event_configure_error:boolean;
+        nominal_event:boolean;
+      ASSIGN
+        init(state) := active;
+        next(state) := state;
+        init(output_log) := none;
+        next(output_log) :=
+          case
+            input_log = none : none;
+            get_null | send_null: null;
+            !get_null & state = active & input_log != filter.block_log & firewall.state = active & network.state = active : input_log;
+            TRUE : output_log;
+          esac;
+
 
 MODULE firewall()
   VAR
@@ -90,29 +116,6 @@ MODULE database(input_log)
         TRUE : output_log;
       esac;
 
-MODULE sender(network,firewall,input_log,filter)
-  VAR
-    state : {inactive,active};
-    output_log : {none,null,warning,error,emerging,message};
-  DEFINE
-    dead := (state=inactive);
-    get_null := (input_log = null);
-    send_null := dead | firewall.dead | network.dead;
-  IVAR
-    fault_event_failed_open:boolean;
-    fault_event_configure_error:boolean;
-    nominal_event:boolean;
-  ASSIGN
-    init(state) := active;
-    next(state) := state;
-    init(output_log) := none;
-    next(output_log) :=
-      case
-        input_log = none : none;
-        get_null | send_null: null;
-        !get_null & state = active & input_log != filter.block_log & firewall.state = active & network.state = active : input_log;
-        TRUE : output_log;
-      esac;
 
 
 MODULE receiver(network,firewall,input_log,filter)
