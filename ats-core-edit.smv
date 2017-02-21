@@ -11,7 +11,7 @@ MODULE Enviroment(actuator)
 	VAR
 		barrier:{0,1};
 		parallel:{0,1};
-		around:{garage,line,no_sign};
+		around:{isGarage,isLine,no_sign};
 		tar_x:{0,1};
 		tar_y:{0,1};
 		car_speed:{-1,0,1};
@@ -23,8 +23,8 @@ MODULE Enviroment(actuator)
 		complete:=(tar_x=0&tar_y=0);
 	ASSIGN
 		init(barrier):=barrier_seq[0];
-		init(light):=1;
-		init(around):=line;
+		--init(light):=1;
+		init(around):=isLine;
 		init(tar_x):=1;
 		init(tar_y):=1;
 		init(i):=0;
@@ -53,7 +53,7 @@ MODULE Enviroment(actuator)
 			(tar_y=1)&(car_speed=1)&(car_wheelAngle=1)&(i=2|i=3):0;
 			TRUE:tar_y;
 		esac;
-		
+
 		next(tar_x):=
 		case
 			car_speed=0:tar_x;
@@ -63,16 +63,16 @@ MODULE Enviroment(actuator)
 
 		next(car_speed):=
 		case
-			actuator[1]=0:car_speed;
-			actuator[1]=1:1;
-			actuator[2]=1:0;
+			actuator[2]=0:car_speed;
+			actuator[2]=1:1;
+			actuator[3]=1:0;
 			TRUE:car_speed;
 		esac;
 
 		next(car_wheelAngle):=
 		case
-			actuator[0]=0:car_wheelAngle;
-			actuator[0]=1:1;
+			actuator[0]=0&actuator[1]=0:car_wheelAngle;
+			actuator[0]=1|actuator[1]=1:1;
 			TRUE:car_wheelAngle;
 		esac;
 
@@ -91,12 +91,12 @@ MODULE ATS(ev)
 		actuator_brake:Brake(ctl_sys.brake);
 		actuator_gear:Gear(ctl_sys.gear);
 
-		cpt_sys:ComputeSystem(sensor_ultrasonic.out,sensor_around.out,sensor_eye.out,can.in);
 		can:CanBus(cpt_sys.can_out,sensor_speed.out);
+		cpt_sys:ComputeSystem(sensor_ultrasonic.out,sensor_around.out,sensor_eye.out,can.get);
 		ctl_sys:ControlSystem(can.out);
-		--can.in=speed_signal
+		--can.get=speed_signal
 	DEFINE
-		actuator:=[actuator_steerWheel.out,actuator_engine.out,actuator_brake.out,actuator_gear.out];
+		actuator:=[actuator_steerWheel.out[0],actuator_steerWheel.out[1],actuator_engine.out,actuator_brake.out,actuator_gear.out];
 
 --===================================ats-end
 
@@ -114,10 +114,10 @@ MODULE ComputeSystem(ultrasonic_signal,around_signal,eye_signal,can_in)
 MODULE ControlSystem(input)
 	DEFINE
 		out:=input;
-		steerWheel:=input[0];
-		engine:=input[1];
-		brake:=input[2];
-		gear:=input[3];
+		steerWheel:=[input[0],input[1]];
+		engine:=input[2];
+		brake:=input[3];
+		gear:=input[4];
 
 --===================================
 
@@ -136,15 +136,15 @@ MODULE Rcar(ultrasonic_signal,around_signal,I2C_input,can_in)
 	VAR
 		ultrasonic:comp_ultrasonic(ultrasonic_signal);
 		around:comp_around(around_signal);
-		stop:comp_stop(ultrasonic.out,can.in);
+		stop:comp_stop(ultrasonic.out,can_in);
 		plan:comp_plan(ultrasonic.out,around.out,I2C_input,can_in);
 
 		--I2C_input=eye_signal
 
 		cmd_brake:{1,0};
-		
+
 	DEFINE
-		can_out:=[cmd_angle,cmd_speed,cmd_brake,cmd_gear,flag];
+		can_out:=[cmd_angle[0],cmd_angle[1],cmd_speed,cmd_brake,cmd_gear];
 		flag:=plan.flag;
 		cmd_speed:=plan.Ve;
 		--[3]
@@ -155,28 +155,29 @@ MODULE Rcar(ultrasonic_signal,around_signal,I2C_input,can_in)
 
 		next(cmd_brake):=
 		case
-			(stop.packetStop[2]=2):1;
+			(stop.isStop=2):1;
 			TRUE:cmd_brake;
 		esac;
 
 --===================================
 --compute
 --===================================
-MODULE comp_plan(ultrasonic_info,around_info,eye_info,can.in)
-	VAR	
+MODULE comp_plan(ultrasonic_info,around_info,eye_info,can_in)
+	VAR
 		--stop enviroment
 		garage:{0,1};
 		line:{0,1};
-		
+
 		gear:{-1,0,1};
 		--if stop when reach end point
 		plan_stop:{0,1};
 		--if follow the road line
 		followLine:{0,1};
 		tinyAdjust:{-1,0,1};
-		
+
+		plan_ctl:comp_ctl(plan_point,can_in);
 	DEFINE
-		Ve:=can.in[0];
+		Ve:=can_in[0];
 		tar_pos:=eye_info;
 		Xe:=tar_pos[0];
 		Ye:=tar_pos[1];
@@ -184,28 +185,28 @@ MODULE comp_plan(ultrasonic_info,around_info,eye_info,can.in)
 		parallel:=around_info[0];
 		flag:=[gear,plan_stop,followLine,parallel,tinyAdjust];
 		--compute the cmd to ctl;
-		plan_ctl:comp_ctl(plan_point);
+
 	ASSIGN
-		
+
 		init(gear):=0;
 		init(plan_stop):=0;
 		init(followLine):=0;
 		init(tinyAdjust):=0;
 		init(garage):=0;
 		init(line):=0;
-		
+
 		next(garage):=
 		case
 			around_info[1]=isGarage:1;
 			TRUE:garage;
 		esac;
-		
+
 		next(line):=
 		case
 			around_info[1]=isLine:1;
 			TRUE:line;
 		esac;
-		
+
 		next(gear):=
 		case
 			ultrasonic_info=1:-1;
@@ -219,13 +220,13 @@ MODULE comp_plan(ultrasonic_info,around_info,eye_info,can.in)
 			(Xe=0)&(Ye=0):1;
 			TRUE:0;
 		esac;
-		
+
 		next(followLine):=
 		case
 			(line!=0)&(garage!=0):1;
 			TRUE:0;
 		esac;
-		
+
 		next(tinyAdjust):=
 		case
 			(ultrasonic_info=1)|(parallel=0):1;
@@ -239,26 +240,27 @@ MODULE comp_ctl(plan_point,can_in)
 		curve:getCurve();
 		PID2:cross();
 		--[3]
-		steerWheel;
+
 	DEFINE
 		--??
 		forecase_dis:=1;
-		PID:=[PID1,PID2];
+		--PID:=[PID1,PID2];
 		--??
+		steerWheel:=plan_point;
 		gear:=1;
 		speed:=can_in[0];
-		control:[steerWheel,speed,gear];
-		
-		
+		control:=[steerWheel[0],steerWheel[1],speed,gear];
+
+
 MODULE comp_stop(ultrasonic_info,can_in)
 	VAR
 		-- state flag, 0 normal, 1 speed down, 2 stop
 		isStop:{0,1,2};
 	DEFINE
 		--the target speed;
-		velo:=can.in[0];
+		velo:=can_in[0];
 		packetStop:=[velo,isStop];
-		
+
 	ASSIGN
 		init(isStop):=0;
 
@@ -267,8 +269,8 @@ MODULE comp_stop(ultrasonic_info,can_in)
 			(ultrasonic_info=1):2;
 			TRUE:isStop;
 		esac;
-		
-		
+
+
 MODULE comp_ultrasonic(input)
 	DEFINE
 		out:=input;
@@ -283,6 +285,15 @@ MODULE comp_around(input)
 		--scene:input[1];
 		out:=input;
 
+MODULE runDis()
+
+MODULE runAngle()
+
+MODULE getCurve()
+
+MODULE cross()
+
+
 --===================================
 --bus
 --===================================
@@ -293,7 +304,7 @@ MODULE I2C(input)
 MODULE CanBus(input,speed)
 	DEFINE
 		out:=input;
-		in:=[speed];
+		get:=[speed,1];
 
 --===================================
 --sensor
@@ -328,7 +339,7 @@ MODULE Engine(input)
 MODULE Brake(input)
 	DEFINE
 		out:=input;
-		
+
 MODULE Gear(input)
 	DEFINE
 		out:=input;
