@@ -1,3 +1,6 @@
+--ev:=[barrier,parallel,around,tar_x,tar_y,car_wheelAngle,car_speed];
+--actuator:=[actuator_steerWheel.out[0],actuator_steerWheel.out[1],actuator_engine.out,actuator_brake.out,actuator_gear.out];
+
 --===================================main
 MODULE main
 	VAR
@@ -120,17 +123,6 @@ MODULE ControlSystem(input)
 		gear:=input[4];
 
 --===================================
-
---===================================
-MODULE TX1(input_signal)
-	VAR
-		target:comp_double(input_signal);
-
-	DEFINE
-		I2C_out:=target.out;
-
---===================================
-
 --===================================
 MODULE Rcar(ultrasonic_signal,around_signal,I2C_input,can_in)
 	VAR
@@ -159,6 +151,12 @@ MODULE Rcar(ultrasonic_signal,around_signal,I2C_input,can_in)
 			TRUE:cmd_brake;
 		esac;
 
+MODULE TX1(input_signal)
+	VAR
+		target:comp_double(input_signal);
+
+	DEFINE
+		I2C_out:=target.out;
 --===================================
 --compute
 --===================================
@@ -187,7 +185,6 @@ MODULE comp_plan(ultrasonic_info,around_info,eye_info,can_in)
 		--compute the cmd to ctl;
 
 	ASSIGN
-
 		init(gear):=0;
 		init(plan_stop):=0;
 		init(followLine):=0;
