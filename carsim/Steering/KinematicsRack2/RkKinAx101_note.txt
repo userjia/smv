@@ -1,2 +1,0 @@
-Steering Ratio: 16.5:1
-Steering Arm Length: 101.6

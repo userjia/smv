@@ -1,1 +1,0 @@
-Front spring rate chosen for a front ride frequency of 1.4 Hz and a front corner weight of 333 kg.

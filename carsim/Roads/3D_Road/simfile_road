@@ -1,5 +1,0 @@
-SIMFILE
-INPUT Roads\3D_Road\Road102.par
-ECHO Roads\3D_Road\Road102_echo.par
-ERDFILE Roads\3D_Road\Road102.erd
-END

@@ -1,1 +1,0 @@
-NOTE:  Sign convention of the CS 7.01b and earlier datasets was reversed and demonstrated a pro-dive suspension.  This dataset represents an anti-dive suspension.

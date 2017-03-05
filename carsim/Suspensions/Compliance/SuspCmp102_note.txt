@@ -1,1 +1,0 @@
-Rear spring rate chosen for a rear ride frequency of 1.6 Hz and a rear corner weight of 222 kg.

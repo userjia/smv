@@ -1,1 +1,0 @@
-NOTE: In earlier versions of CarSim 7.01b and earlier, the CMz dataset data had incorrect sign data and has been replaced by this dataset.
