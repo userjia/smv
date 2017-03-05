@@ -1,0 +1,37 @@
+PARSFILE
+#FullDataName Animator: Shape File Link`Mountains`Terrain
+#MiscYellow3
+add_obj Animator\3D_shape_files_CS\scenery\horizon\mountains_w_light_grass.obj
+#ENDMYellow
+
+SET_COLOR 1 1 1
+SET_SCALE_X 15
+SET_SCALE_Y 15
+SET_SCALE_Z 3
+*IMAGE_FIT_MODE 1
+#RingCtrl0 1
+#CheckBox0 1    
+set_lighting off
+#CheckBox1 0    
+set_fogging on
+#CheckBox3 0    
+
+show_front on
+show_back off
+
+SPECIAL_PARSFILE Animator\Cameras\Camera103.par
+#BlueLink2 Animator: Camera Setup`Shape Preview (Top)` Shape Preview` , Animator camera
+
+*IMAGE_TYPE PASTED
+*IMAGE_PASTED Animator\STL\AniSTL117.png
+
+LOG_ENTRY Used Dataset: Animator: Shape File Link; { Terrain } Mountains
+#Library : Animator: Shape File Link
+#DataSet : Mountains
+#Category: Terrain
+#FileID  : AniSTL117
+#Product : CarSim Version 8.02, March 2010
+#Last update: 02-28-2017 15:01:58
+#VehCode Shape File
+
+END

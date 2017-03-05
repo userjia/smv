@@ -1,0 +1,27 @@
+PARSFILE
+#FullDataName Road: X-Y Coordinates of Centerline`Straight`
+SPATH 0
+
+#CheckBox0 0    
+OPT_ROAD_LOOP 0
+
+#RadioCtrl0 0    
+
+OPT_ROAD 1
+
+#DiagramOne0
+YIN_TABLE
+0, 0, 0
+100, 0, 100
+ENDTABLE
+
+LOG_ENTRY Used Dataset: Road: X-Y Coordinates of Centerline; Straight
+#Library : Road: X-Y Coordinates of Centerline
+#DataSet : Straight
+#Category: 
+#FileID  : RoadXY101
+#Product : CarSim Version 8.02, March 2010
+#Last update: 02-28-2017 15:01:54
+#VehCode Horizontal (X-Y) table
+
+END

@@ -1,0 +1,26 @@
+PARSFILE
+#FullDataName Suspension: Spring`35 N/mm`
+#RingCtrl0 COEFFICIENT
+FS_COMP_COEFFICIENT 35
+FS_EXT_COEFFICIENT 35
+#RadioCtrl0 0    
+#RadioCtrl1 0    
+
+SPRING_COMP_BETA 3.0
+SPRING_EXT_BETA 3.0
+*SCALAR 35
+*OFFSET 20
+
+FS_COMP_OFFSET 20
+FS_EXT_OFFSET -20
+
+LOG_ENTRY Used Dataset: Suspension: Spring; 35 N/mm
+#Library : Suspension: Spring
+#DataSet : 35 N/mm
+#Category: 
+#FileID  : Spring102
+#Product : CarSim Version 8.02, March 2010
+#Last update: 02-28-2017 15:01:39
+#VehCode Spring Alone
+
+END

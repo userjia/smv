@@ -1,0 +1,52 @@
+PARSFILE
+#FullDataName Suspension: Lateral Position`Rear 5-Link - Lateral Movement`5-Link Rear
+#RingCtrl0 SPLINE
+#DiagramOne0
+SUSP_LAT_TABLE SPLINE
+-70, 5.34878
+-60, 3.82136
+-50, 2.55534
+-40, 1.54581
+-30, 0.788587
+-20, 0.280222
+-10, 0.018009
+0, 0
+10, 0.22505
+20, 0.692872
+30, 1.40412
+40, 2.36046
+50, 3.56474
+60, 5.02106
+70, 6.73495
+ENDTABLE
+SUSP_LAT_AXLE_JOUNCE_TABLE SPLINE
+-70, 5.34878
+-60, 3.82136
+-50, 2.55534
+-40, 1.54581
+-30, 0.788587
+-20, 0.280222
+-10, 0.018009
+0, 0
+10, 0.22505
+20, 0.692872
+30, 1.40412
+40, 2.36046
+50, 3.56474
+60, 5.02106
+70, 6.73495
+ENDTABLE
+#RadioCtrl0 0    
+
+
+
+LOG_ENTRY Used Dataset: Suspension: Lateral Position; { 5-Link Rear } Rear 5-Link - Lateral Movement
+#Library : Suspension: Lateral Position
+#DataSet : Rear 5-Link - Lateral Movement
+#Category: 5-Link Rear
+#FileID  : SusLat102
+#Product : CarSim Version 8.02, March 2010
+#Last update: 02-28-2017 15:01:40
+#VehCode Lateral Movement
+
+END

@@ -1,0 +1,21 @@
+PARSFILE
+#FullDataName Road: Centerline Elevation`Flat`
+OPT_ROAD 1
+
+#RingCtrl0 CONSTANT
+ROAD_ZS_CONSTANT 0
+#RadioCtrl0 0    
+
+*SCALAR 0
+
+
+LOG_ENTRY Used Dataset: Road: Centerline Elevation; Flat
+#Library : Road: Centerline Elevation
+#DataSet : Flat
+#Category: 
+#FileID  : RoadZ101
+#Product : CarSim Version 8.02, March 2010
+#Last update: 02-28-2017 15:02:14
+#VehCode Centerline elevation: Z vs S
+
+END

@@ -1,0 +1,42 @@
+PARSFILE
+#FullDataName Plot: Setup`Roll -- Sprung Masses`Vehicle Motion
+PARSFILE Plot\Transform\PlotTfm101.par
+#BlueLink1 Plot: Data Transform`No Filter` ` , Data transform (optional)
+
+
+PARSFILE Plot\Format\PlotFmt101.par
+
+#MiscYellow0
+PLOTCHANNELS Roll, Time
+PLOTCHANNELS Roll_2, Time
+
+#ENDMYellow
+
+
+#RingCtrl0 Linear
+YLINEAR Linear
+#RingCtrl1 Linear
+XLINEAR Linear
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl4 0
+#RingCtrl5 0
+#RingCtrl6 0
+#RingCtrl7 0
+
+
+PTITLE Roll -- Sprung Masses
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Vehicle Motion } Roll -- Sprung Masses
+#Library : Plot: Setup
+#DataSet : Roll -- Sprung Masses
+#Category: Vehicle Motion
+#FileID  : Plot106
+#Product : CarSim Version 8.02, March 2010
+#Last update: 02-28-2017 15:02:11
+#VehCode Plot setup
+
+END

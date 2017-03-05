@@ -1,0 +1,2 @@
+Generic front strut type suspension geometry created with SuspensionSim.
+

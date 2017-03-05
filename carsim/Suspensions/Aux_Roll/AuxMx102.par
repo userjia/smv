@@ -1,0 +1,19 @@
+PARSFILE
+#FullDataName Suspension: Auxiliary Roll Moment`Linear 251 N-m/deg`
+#RingCtrl0 COEFFICIENT
+#RadioCtrl0 0    
+
+*SCALAR 251
+
+MX_AUX_COEFFICIENT 251
+
+LOG_ENTRY Used Dataset: Suspension: Auxiliary Roll Moment; Linear 251 N-m/deg
+#Library : Suspension: Auxiliary Roll Moment
+#DataSet : Linear 251 N-m/deg
+#Category: 
+#FileID  : AuxMx102
+#Product : CarSim Version 8.02, March 2010
+#Last update: 02-28-2017 15:01:38
+#VehCode Aux. Roll Moment
+
+END

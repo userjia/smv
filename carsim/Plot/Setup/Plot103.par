@@ -1,0 +1,42 @@
+PARSFILE
+#FullDataName Plot: Setup`Steer -- Road Wheel Steer (Car, Front)`Steering
+PARSFILE Plot\Transform\PlotTfm101.par
+#BlueLink1 Plot: Data Transform`No Filter` ` , Data transform (optional)
+
+
+PARSFILE Plot\Format\PlotFmt101.par
+
+#MiscYellow0
+PLOTCHANNELS Steer_L1, Time
+PLOTCHANNELS Steer_R1, Time
+
+#ENDMYellow
+
+
+#RingCtrl0 Linear
+YLINEAR Linear
+#RingCtrl1 Linear
+XLINEAR Linear
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl4 0
+#RingCtrl5 0
+#RingCtrl6 0
+#RingCtrl7 0
+
+
+PTITLE Steer -- Road Wheel Steer (Car, Front)
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Steering } Steer -- Road Wheel Steer (Car, Front)
+#Library : Plot: Setup
+#DataSet : Steer -- Road Wheel Steer (Car, Front)
+#Category: Steering
+#FileID  : Plot103
+#Product : CarSim Version 8.02, March 2010
+#Last update: 02-28-2017 15:02:10
+#VehCode Plot setup
+
+END

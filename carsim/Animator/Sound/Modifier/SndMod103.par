@@ -1,0 +1,35 @@
+PARSFILE
+#FullDataName Animator: Sound Modifier`Tire Skid - Volume (Slip)`Tire Sound Modifiers
+
+#MiscYellow0
+define_output mod2_<<tire>> = abs(VyTC_<<tire>>); units = km/h;
+#ENDMYellow
+
+
+#RingCtrl0 VOLUME
+ADD_SOUND_MODIFIER VOLUME
+SOUNDMOD_OPERATION mult
+
+SOUNDMOD_INPUT_NAME mod2_<<tire>>
+SOUNDMOD_INPUT_MIN 7.5
+SOUNDMOD_INPUT_LOW 50.0
+SOUNDMOD_INPUT_HIGH 75.0
+SOUNDMOD_INPUT_MAX 100.0
+SOUNDMOD_OUTPUT_MIN 0.0
+SOUNDMOD_OUTPUT_LOW 0.333
+SOUNDMOD_OUTPUT_HIGH 0.666
+SOUNDMOD_OUTPUT_MAX 1.00
+
+WRT_mod2_<<tire>>
+ANI_mod2_<<tire>>
+
+LOG_ENTRY Used Dataset: Animator: Sound Modifier; { Tire Sound Modifiers } Tire Skid - Volume (Slip)
+#Library : Animator: Sound Modifier
+#DataSet : Tire Skid - Volume (Slip)
+#Category: Tire Sound Modifiers
+#FileID  : SndMod103
+#Product : CarSim Version 8.02, March 2010
+#Last update: 02-28-2017 15:01:35
+#VehCode Sound Modifier
+
+END

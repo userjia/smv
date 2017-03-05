@@ -1,0 +1,39 @@
+PARSFILE
+#FullDataName Animator: Camera Setup`Vehicle Pictures`Shape Preview
+#RingCtrl1 0
+
+#CheckBox0 0    
+#CheckBox1 0    
+
+GHOST_COUNT 0
+SET_CAMERA_Reference_Frame Shape Preview Yaw for Shape Preview
+PARSFILE Animator\Frames\Frame101.par
+#BlueLink0 Animator: Reference Frame`Yaw for Shape Preview` Shape Preview` , Reference frame for outside camera
+
+SET_LOOKPOINT_Reference_Frame Shape Preview Yaw for Shape Preview
+SET_LOOKPOINT_X 1
+SET_LOOKPOINT_Y 0
+SET_LOOKPOINT_Z 0.5
+SET_AZIMUTH 230
+SET_ELEVATION 6
+SET_DISTANCE 12
+*SET_LOOKPOINT_X 1
+*SET_LOOKPOINT_Y 0
+*SET_LOOKPOINT_Z 0.5
+*SET_AZIMUTH 230
+*SET_ELEVATION 6
+*SET_DISTANCE 12
+GHOST_COUNT 0
+FOG_SCALE 0
+SET_FIELD_OF_VIEW 21.1
+
+LOG_ENTRY Used Dataset: Animator: Camera Setup; { Shape Preview } Vehicle Pictures
+#Library : Animator: Camera Setup
+#DataSet : Vehicle Pictures
+#Category: Shape Preview
+#FileID  : Camera101
+#Product : CarSim Version 8.02, March 2010
+#Last update: 02-28-2017 15:01:30
+#VehCode Camera
+
+END

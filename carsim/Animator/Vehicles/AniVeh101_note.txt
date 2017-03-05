@@ -1,0 +1,1 @@
+The Animator: Vehicles and Other Moving Objects screen is used to define animation shapes to be used with the animator.

@@ -1,0 +1,88 @@
+PARSFILE
+#FullDataName Road: Animator Surface Shapes`1200 m Road + 200 m Light Grass (One Lane)`Roads
+NLANES 5
+OPTTHRESHOLD 1
+#MiscYellow0
+# 0.878 0.878 0.878, road (one lane), 0, 100, 1, -4, m, 4, m, , , -100, 1200, 5, , ,
+# 0.878 0.878 0.878, road transition (light), 0, 60, 1, 4, m, 7.1, m, , , -100, 1200, 5, , ,
+# 0.878 0.878 0.878, grass (light), 0, 60, 3.1, -7.1, m, -100, m, , , -100, 1200, 5, , ,
+# 0.878 0.878 0.878, grass (light), 0, 60, 3.1, 7.1, m, 100, m, , , -100, 1200, 5, , ,
+# 0.878 0.878 0.878, road transition (light), 0, 60, -0.969, -4, m, -7.1, m, , , -100, 1200, 5, , ,
+#ENDMYellow
+
+#CheckBox0 0    
+MIRROR 0
+
+COLOR(1) 0.878 0.878 0.878
+MATERIAL(1) road (one lane)
+SPECULAR(1) 0
+SCALE(1) 100
+LTILES(1) 1
+LIN(1) -4
+LINUNITS(1) m
+LOUT(1) 4
+LOUTUNITS(1) m
+SSTART(1) -100
+SSTOP(1) 1200
+SINT(1) 5
+COLOR(2) 0.878 0.878 0.878
+MATERIAL(2) road transition (light)
+SPECULAR(2) 0
+SCALE(2) 60
+LTILES(2) 1
+LIN(2) 4
+LINUNITS(2) m
+LOUT(2) 7.1
+LOUTUNITS(2) m
+SSTART(2) -100
+SSTOP(2) 1200
+SINT(2) 5
+COLOR(3) 0.878 0.878 0.878
+MATERIAL(3) grass (light)
+SPECULAR(3) 0
+SCALE(3) 60
+LTILES(3) 3.1
+LIN(3) -7.1
+LINUNITS(3) m
+LOUT(3) -100
+LOUTUNITS(3) m
+SSTART(3) -100
+SSTOP(3) 1200
+SINT(3) 5
+COLOR(4) 0.878 0.878 0.878
+MATERIAL(4) grass (light)
+SPECULAR(4) 0
+SCALE(4) 60
+LTILES(4) 3.1
+LIN(4) 7.1
+LINUNITS(4) m
+LOUT(4) 100
+LOUTUNITS(4) m
+SSTART(4) -100
+SSTOP(4) 1200
+SINT(4) 5
+COLOR(5) 0.878 0.878 0.878
+MATERIAL(5) road transition (light)
+SPECULAR(5) 0
+SCALE(5) 60
+LTILES(5) -0.969
+LIN(5) -4
+LINUNITS(5) m
+LOUT(5) -7.1
+LOUTUNITS(5) m
+SSTART(5) -100
+SSTOP(5) 1200
+SINT(5) 5
+MTL_FILE Roads\materials\road.mtl
+
+
+LOG_ENTRY Used Dataset: Road: Animator Surface Shapes; { Roads } 1200 m Road + 200 m Light Grass (One Lane)
+#Library : Road: Animator Surface Shapes
+#DataSet : 1200 m Road + 200 m Light Grass (One Lane)
+#Category: Roads
+#FileID  : RdShp102
+#Product : CarSim Version 8.02, March 2010
+#Last update: 02-28-2017 15:02:15
+#VehCode Road shapes
+
+END

@@ -1,0 +1,102 @@
+PARSFILE
+#FullDataName Animator: Shape Assembly`B-Class, Hatchback`CS B-Class
+*COLOR .36 .117 .117
+*OFFSET_X 0
+*OFFSET_Y 0
+*OFFSET_Z 0.27
+*X_REF_LENGTH 2575
+*Y_REF_LENGTH 1600
+*Z_REF_LENGTH 1600
+#CheckBox0 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 1    
+#CheckBox5 1    
+
+#RingCtrl0 1
+#RingCtrl1 2
+#RingCtrl2 2
+*IMAGE_TYPE PASTED
+*IMAGE_PASTED Animator\STL_Groups\StlGroup102.png
+PARSFILE Animator\STL\AniSTL105.par
+#BlueLink0 Animator: Shape File Link`Hatchback: Body` CS Hatchback` , Shape File
+
+show_front on
+show_back off
+set_offset_x 0
+set_offset_y 0
+set_offset_z 0.27
+PARSFILE Animator\STL\AniSTL106.par
+#BlueLink1 Animator: Shape File Link`Hatchback: Body 2` CS Hatchback` , Shape File
+
+show_front on
+show_back off
+set_offset_x 0
+set_offset_y 0
+set_offset_z 0.27
+PARSFILE Animator\STL\AniSTL107.par
+#BlueLink2 Animator: Shape File Link`Hatchback: Details` CS Hatchback` , Shape File
+
+show_front on
+show_back off
+set_offset_x 0
+set_offset_y 0
+set_offset_z 0.27
+PARSFILE Animator\STL\AniSTL108.par
+#BlueLink3 Animator: Shape File Link`Hatchback: Interior` CS Hatchback` , Shape File
+
+show_front on
+show_back off
+set_offset_x 0
+set_offset_y 0
+set_offset_z 0.27
+PARSFILE Animator\STL\AniSTL109.par
+#BlueLink4 Animator: Shape File Link`Hatchback: Interior Trim` CS Hatchback` , Shape File
+
+show_front on
+show_back off
+set_offset_x 0
+set_offset_y 0
+set_offset_z 0.27
+PARSFILE Animator\STL\AniSTL110.par
+#BlueLink5 Animator: Shape File Link`Hatchback: Steering Wheel` CS Hatchback` , Shape File
+
+show_front on
+show_back off
+set_offset_x 0
+set_offset_y 0
+set_offset_z 0.27
+PARSFILE Animator\STL\AniSTL111.par
+#BlueLink6 Animator: Shape File Link`Hatchback: Windows` CS Hatchback` , Shape File
+
+show_front on
+show_back off
+set_offset_x 0
+set_offset_y 0
+set_offset_z 0.27
+PARSFILE Animator\STL\AniSTL112.par
+#BlueLink13 Animator: Shape File Link`Hatchback: Driver` CS Hatchback` , Shape File
+
+show_front on
+show_back off
+set_offset_x 0
+set_offset_y 0
+set_offset_z 0.27
+x_ref_length 2575
+y_ref_length 1600
+z_ref_length 1600
+
+SPECIAL_PARSFILE Animator\Cameras\Camera104.par
+#BlueLink17 Animator: Camera Setup`Shape Preview (Side)` Shape Preview` , Animator camera
+
+
+LOG_ENTRY Used Dataset: Animator: Shape Assembly; { CS B-Class } B-Class, Hatchback
+#Library : Animator: Shape Assembly
+#DataSet : B-Class, Hatchback
+#Category: CS B-Class
+#FileID  : StlGroup102
+#Product : CarSim Version 8.02, March 2010
+#Last update: 02-28-2017 15:01:45
+#VehCode Shape Group
+
+END

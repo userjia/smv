@@ -1,0 +1,78 @@
+PARSFILE
+#FullDataName Brakes: Four-Wheel System`B-Class, Hatchback w/ ABS`CS B-Class
+TC_L1 0.06
+TC_R1 0.06
+TC_L2 0.06
+TC_R2 0.06
+TL_L1 0
+TL_R1 0
+TL_L2 0
+TL_R2 0
+OFF_F_SGUI 0.2
+OFF_R_SGUI 0.1
+ON_F_SGUI 0.1
+ON_R_SGUI 0.06
+V_F_SGUI 2
+V_R_SGUI 2
+
+#CheckBox0 0    
+
+
+iaxle 1
+iside 1
+PARSFILE Brakes\Torque\BrkTrq101.par
+#BlueLink0 Brakes: Torque`250 N-m/MPa` ` , Left front
+
+PARSFILE Brakes\Proportioning\BrkProp101.par
+#BlueLink4 Brakes: Proportioning / Limiting Valve`Unity Gain` ` , Left front
+
+TC_BK 0.06
+TLAG_BK 0
+ABS_SLIP_OFF 0.2
+ABS_SLIP_ON 0.1
+ABS_VMIN 2
+
+iside 2
+PARSFILE Brakes\Torque\BrkTrq101.par
+#BlueLink1 Brakes: Torque`250 N-m/MPa` ` , Right front
+
+PARSFILE Brakes\Proportioning\BrkProp101.par
+#BlueLink5 Brakes: Proportioning / Limiting Valve`Unity Gain` ` , Right front
+
+TC_BK 0.06
+TLAG_BK 0
+
+iaxle 2
+iside 1
+PARSFILE Brakes\Torque\BrkTrq102.par
+#BlueLink2 Brakes: Torque`150 N-m/MPa` ` , Left rear
+
+PARSFILE Brakes\Proportioning\BrkProp102.par
+#BlueLink6 Brakes: Proportioning / Limiting Valve`Unity until 1.5Mpa then 30%` ` , Left rear
+
+TC_BK 0.06
+TLAG_BK 0
+ABS_SLIP_OFF 0.1
+ABS_SLIP_ON 0.06
+ABS_VMIN 2
+
+iside 2
+PARSFILE Brakes\Torque\BrkTrq102.par
+#BlueLink3 Brakes: Torque`150 N-m/MPa` ` , Right rear
+
+PARSFILE Brakes\Proportioning\BrkProp102.par
+#BlueLink7 Brakes: Proportioning / Limiting Valve`Unity until 1.5Mpa then 30%` ` , Right rear
+
+TC_BK 0.06
+TLAG_BK 0
+
+LOG_ENTRY Used Dataset: Brakes: Four-Wheel System; { CS B-Class } B-Class, Hatchback w/ ABS
+#Library : Brakes: Four-Wheel System
+#DataSet : B-Class, Hatchback w/ ABS
+#Category: CS B-Class
+#FileID  : Brk4W101
+#Product : CarSim Version 8.02, March 2010
+#Last update: 02-28-2017 15:01:51
+#VehCode 4-wheel system
+
+END

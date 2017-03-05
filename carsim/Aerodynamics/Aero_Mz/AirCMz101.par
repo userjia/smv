@@ -1,0 +1,44 @@
+PARSFILE
+#FullDataName Aerodynamics: Mz (Yaw Moment) Coefficient`CMz`
+#RingCtrl0 LINEAR_FLAT
+#RadioCtrl0 0    
+
+
+#DiagramOne0
+MZ_AERO_SHAPING_TABLE LINEAR_FLAT
+-90, 0
+-84, -0.0045
+-78, -0.0175
+-72, -0.0378
+-66, -0.0634
+-60, -0.0918
+-54, -0.1202
+-48, -0.1458
+-42, -0.1661
+-36, -0.1791
+-30, -0.1836
+-20, -0.1836
+20, 0.1836
+30, 0.1836
+36, 0.1791
+42, 0.1661
+48, 0.1458
+54, 0.1202
+60, 0.0918
+66, 0.0634
+72, 0.0378
+78, 0.0175
+84, 0.0045
+90, 0
+ENDTABLE
+
+LOG_ENTRY Used Dataset: Aerodynamics: Mz (Yaw Moment) Coefficient; CMz
+#Library : Aerodynamics: Mz (Yaw Moment) Coefficient
+#DataSet : CMz
+#Category: 
+#FileID  : AirCMz101
+#Product : CarSim Version 8.02, March 2010
+#Last update: 02-28-2017 15:01:43
+#VehCode Aero Mz vs aero slip
+
+END

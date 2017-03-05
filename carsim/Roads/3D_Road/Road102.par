@@ -1,0 +1,54 @@
+PARSFILE
+#FullDataName Road: 3D Surface`1200 m One Lane`Straight
+OPT_ROAD 1
+iroad 1
+
+RR_SURF 1
+DZ_SHADOW 0.005
+L_CAMERA_FRONT 0.5
+L_CAMERA_REAR 0.5
+*IMAGE_TYPE PASTED
+*IMAGE_PASTED Roads\3D_Road\Road102.png
+PARSFILE Roads\Center_XY\RoadXY101.par
+#BlueLink0 Road: X-Y Coordinates of Centerline`Straight` ` , Centerline geometry
+
+PARSFILE Roads\Center_Z\RoadZ101.par
+#BlueLink1 Road: Centerline Elevation`Flat` ` , Centerline elevation
+
+PARSFILE Roads\dZ_Map\RdElMap101.par
+#BlueLink2 Road: Off-Center Elevation Map`Flat` ` , Off-center elevation
+
+PARSFILE Roads\Friction\RdFric102.par
+#BlueLink3 Road: Friction Map`0.85` Constant Mu` , Friction
+
+PARSFILE Roads\Shapes\RdShp102.par
+#BlueLink4 Road: Animator Surface Shapes`1200 m Road + 200 m Light Grass (One Lane)` Roads` , Road shape definitions
+
+add_reference_frame road_stuff_1
+reference_frame_ghosts off
+PARSFILE Animator\Groups\Group101.par
+#BlueLink6 Animator: Group`Partly Cloudy Sky (Normal Resolution)` Skies` , Misc. animator set
+
+add_reference_frame road_stuff_2
+reference_frame_ghosts off
+add_reference_frame road_stuff_3
+reference_frame_ghosts off
+add_reference_frame road_stuff_4
+reference_frame_ghosts off
+iroad 2
+
+SPECIAL_PARSFILE Animator\Cameras\Camera105.par
+#BlueLink5 Animator: Camera Setup`Rear View , Road Ref. (Frt. Facing)` Road Reference` , Camera
+
+parsfile Roads\3D_Road\Road102.ani
+
+LOG_ENTRY Used Dataset: Road: 3D Surface; { Straight } 1200 m One Lane
+#Library : Road: 3D Surface
+#DataSet : 1200 m One Lane
+#Category: Straight
+#FileID  : Road102
+#Product : CarSim Version 8.02, March 2010
+#Last update: 02-28-2017 15:02:15
+#VehCode 3D road
+
+END

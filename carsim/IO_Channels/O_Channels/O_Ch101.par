@@ -1,0 +1,33 @@
+PARSFILE
+#FullDataName I/O Channels: Export`ats-test output`Simulink
+*README_FILE Programs\solvers\ReadMe\i_i_outputs_tab.txt
+
+#CheckBox0 0    
+
+#RingCtrl0 2
+
+EXP_Xo
+EXP_Yo
+EXP_Yaw
+EXP_Vx
+EXP_Steer_SW
+#MiscYellow0
+#Number of Selected Channels: 5
+#CHN_NAME: Xo
+#CHN_NAME: Yo
+#CHN_NAME: Yaw
+#CHN_NAME: Vx
+#CHN_NAME: Steer_SW
+#ENDMYellow
+
+
+LOG_ENTRY Used Dataset: I/O Channels: Export; { Simulink } ats-test output
+#Library : I/O Channels: Export
+#DataSet : ats-test output
+#Category: Simulink
+#FileID  : O_Ch101
+#Product : CarSim Version 8.02, March 2010
+#Last update: 02-28-2017 15:01:31
+#VehCode Export Channels
+
+END

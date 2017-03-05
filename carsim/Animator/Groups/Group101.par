@@ -1,0 +1,32 @@
+PARSFILE
+#FullDataName Animator: Group`Partly Cloudy Sky (Normal Resolution)`Skies
+PARSFILE Animator\Frames\Frame104.par
+#BlueLink0 Animator: Reference Frame`Camera Front Point w/o Yaw` Road Tracking` , Animator data
+
+PARSFILE Animator\STL\AniSTL115.par
+#BlueLink1 Animator: Shape File Link`Partly Cloudy Sky (Normal Resolution)` Skies` , Animator data
+
+PARSFILE Animator\STL\AniSTL116.par
+#BlueLink2 Animator: Shape File Link`Complex Land Bowl for Light Grass` Terrain` , Animator data
+
+PARSFILE Animator\STL\AniSTL117.par
+#BlueLink3 Animator: Shape File Link`Mountains` Terrain` , Animator data
+
+
+#CheckBox0 0    
+
+
+SPECIAL_PARSFILE Animator\Cameras\Camera104.par
+#BlueLink20 Animator: Camera Setup`Shape Preview (Side)` Shape Preview` , Animator camera
+
+
+LOG_ENTRY Used Dataset: Animator: Group; { Skies } Partly Cloudy Sky (Normal Resolution)
+#Library : Animator: Group
+#DataSet : Partly Cloudy Sky (Normal Resolution)
+#Category: Skies
+#FileID  : Group101
+#Product : CarSim Version 8.02, March 2010
+#Last update: 02-28-2017 15:01:58
+#VehCode Animator Group
+
+END

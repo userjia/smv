@@ -1,0 +1,15 @@
+PARSFILE
+#FullDataName External PARSFILE`No Data`Empty (You should edit or delete this)
+#VehCode External file
+#RingCtrl0 0
+
+LOG_ENTRY Used Dataset: External PARSFILE; { Empty (You should edit or delete this) } No Data
+#Library : External PARSFILE
+#DataSet : No Data
+#Category: Empty (You should edit or delete this)
+#FileID  : External100
+#Product : CarSim Version 8.02, March 2010
+#Last update: 02-28-2017 15:02:18
+#VehCode External file
+
+END

@@ -1,0 +1,43 @@
+PARSFILE
+#FullDataName Aerodynamics: Main Screen`B-Class, Hatchback Aero`CS B-Class
+X_REF_AERO -1000
+Y_REF_AERO 0
+H_REF_AERO 0
+L_REF_AERO 2370
+AREA_AERO 1.6
+D_AIR 1.206
+
+X_REF_AIR -1000
+Y_REF_AIR 0
+H_REF_AIR 0
+L_REF_AIR 2370
+AAIR_CS 1.6
+PARSFILE Aerodynamics\Aero_Fx\AirCFx101.par
+#BlueLink0 Aerodynamics: Fx (Drag) Coefficient`CFx` ` , Long. force
+
+PARSFILE Aerodynamics\Aero_Fy\AirCFy101.par
+#BlueLink1 Aerodynamics: Fy (Side Force) Coefficient`CFy` ` , Lateral force
+
+PARSFILE Aerodynamics\Aero_Fz\AirCFz101.par
+#BlueLink2 Aerodynamics: Fz (Lift) Coefficient`CFz` ` , Vertical force
+
+PARSFILE Aerodynamics\Aero_Mx\AirCMx101.par
+#BlueLink3 Aerodynamics: Mx (Roll Moment) Coefficient`CMx` ` , Roll moment
+
+PARSFILE Aerodynamics\Aero_My\AirCMy101.par
+#BlueLink4 Aerodynamics: My (Pitch Moment) Coefficient`CMy` ` , Pitch moment
+
+PARSFILE Aerodynamics\Aero_Mz\AirCMz101.par
+#BlueLink5 Aerodynamics: Mz (Yaw Moment) Coefficient`CMz` ` , Yaw moment
+
+
+LOG_ENTRY Used Dataset: Aerodynamics: Main Screen; { CS B-Class } B-Class, Hatchback Aero
+#Library : Aerodynamics: Main Screen
+#DataSet : B-Class, Hatchback Aero
+#Category: CS B-Class
+#FileID  : Aero101
+#Product : CarSim Version 8.02, March 2010
+#Last update: 02-28-2017 15:01:43
+#VehCode Aerodynamics
+
+END

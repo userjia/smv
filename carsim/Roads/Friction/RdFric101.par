@@ -1,0 +1,21 @@
+PARSFILE
+#FullDataName Road: Friction Map`1.0`Constant Mu
+OPT_ROAD 1
+
+#RingCtrl0 CONSTANT
+MU_ROAD_CONSTANT 1
+#RadioCtrl0 0    
+
+*SCALAR 1
+
+
+LOG_ENTRY Used Dataset: Road: Friction Map; { Constant Mu } 1.0
+#Library : Road: Friction Map
+#DataSet : 1.0
+#Category: Constant Mu
+#FileID  : RdFric101
+#Product : CarSim Version 8.02, March 2010
+#Last update: 02-28-2017 15:01:54
+#VehCode Friction: Mu vs S, L
+
+END

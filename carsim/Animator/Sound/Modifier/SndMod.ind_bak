@@ -1,0 +1,16 @@
+SNDMOD.IND v1.0
+12   0    
+112  Animator: Sound Modifier
+109  , Gas Engine Freq 1` Engine Sound Modifiers` 02-28-2017` 15:01:46` 0
+107  , Gas Engine Vol. 1, Throttle` Engine Sound Modifiers` 02-28-2017` 15:01:46` 0
+110  , Gas Engine Vol. 2, Throttle` Engine Sound Modifiers` 02-28-2017` 15:01:46` 0
+108  , Gas Engine, RPM` Engine Sound Modifiers` 02-28-2017` 15:01:46` 0
+101  , Tire Skid - Freq` Tire Sound Modifiers` 02-28-2017` 15:01:35` 0
+102  , Tire Skid - Volume (Force)` Tire Sound Modifiers` 02-28-2017` 15:01:35` 0
+103  , Tire Skid - Volume (Slip)` Tire Sound Modifiers` 02-28-2017` 15:01:35` 0
+104  , Tire Slip - Freq` Tire Sound Modifiers` 02-28-2017` 15:01:36` 0
+105  , Tire Slip - Volume (Force)` Tire Sound Modifiers` 02-28-2017` 15:01:36` 0
+106  , Tire Slip - Volume (Slip)` Tire Sound Modifiers` 02-28-2017` 15:01:36` 0
+112  , Wind Frequency` Wind Sound Modifiers` 02-28-2017` 15:01:47` 0
+111  , Wind Vol. 1` Wind Sound Modifiers` 02-28-2017` 15:01:46` 0
+END

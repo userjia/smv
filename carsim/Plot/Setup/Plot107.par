@@ -1,0 +1,42 @@
+PARSFILE
+#FullDataName Plot: Setup`Yaw Rate -- Sprung Masses`Vehicle Motion
+PARSFILE Plot\Transform\PlotTfm101.par
+#BlueLink1 Plot: Data Transform`No Filter` ` , Data transform (optional)
+
+
+PARSFILE Plot\Format\PlotFmt101.par
+
+#MiscYellow0
+PLOTCHANNELS AVz, Time
+PLOTCHANNELS AVz_2, Time
+
+#ENDMYellow
+
+
+#RingCtrl0 Linear
+YLINEAR Linear
+#RingCtrl1 Linear
+XLINEAR Linear
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl4 0
+#RingCtrl5 0
+#RingCtrl6 0
+#RingCtrl7 0
+
+
+PTITLE Yaw Rate -- Sprung Masses
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Vehicle Motion } Yaw Rate -- Sprung Masses
+#Library : Plot: Setup
+#DataSet : Yaw Rate -- Sprung Masses
+#Category: Vehicle Motion
+#FileID  : Plot107
+#Product : CarSim Version 8.02, March 2010
+#Last update: 02-28-2017 15:02:11
+#VehCode Plot setup
+
+END

@@ -1,0 +1,39 @@
+PARSFILE
+#FullDataName Animator: Camera Setup`3 deg. Azimuth, Veh. Ref.`Vehicle Reference
+#RingCtrl1 0
+
+#CheckBox0 0    
+#CheckBox1 0    
+
+GHOST_COUNT 0
+SET_CAMERA_Reference_Frame Cameras Camera Tracking X-Y-Z
+PARSFILE Animator\Frames\Frame102.par
+#BlueLink0 Animator: Reference Frame`Camera Tracking X-Y-Z` Cameras` , Reference frame for outside camera
+
+SET_LOOKPOINT_Reference_Frame Cameras Camera Tracking X-Y-Z
+SET_LOOKPOINT_X -2
+SET_LOOKPOINT_Y 0
+SET_LOOKPOINT_Z 0.25
+SET_AZIMUTH 3
+SET_ELEVATION 4.5
+SET_DISTANCE 80
+*SET_LOOKPOINT_X -2
+*SET_LOOKPOINT_Y 0
+*SET_LOOKPOINT_Z 0.25
+*SET_AZIMUTH 3
+*SET_ELEVATION 4.5
+*SET_DISTANCE 80
+GHOST_COUNT 0
+FOG_SCALE 0
+SET_FIELD_OF_VIEW 6
+
+LOG_ENTRY Used Dataset: Animator: Camera Setup; { Vehicle Reference } 3 deg. Azimuth, Veh. Ref.
+#Library : Animator: Camera Setup
+#DataSet : 3 deg. Azimuth, Veh. Ref.
+#Category: Vehicle Reference
+#FileID  : Camera102
+#Product : CarSim Version 8.02, March 2010
+#Last update: 02-28-2017 15:01:31
+#VehCode Camera
+
+END

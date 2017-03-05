@@ -1,0 +1,2 @@
+According to SAE convention, the reference point is located at the midpoint of the wheelbase, the midpoint of the track, at ground level., and the reference length is equal to the wheelbase.
+
